@@ -149,7 +149,7 @@ minetest.register_abm({
 minetest.register_craft({
 	output = "ufowreck:alien_antigrav",
 	recipe = {
-	{"technic:copper_coil", "technic:silver_wire", "technic:copper_coil"},
+	{"technic:copper_coil", "basic_materials:silver_wire", "technic:copper_coil"},
 	{"ufowreck:alien_control", "technic:hv_transformer", "ufowreck:alien_control"},
 	{"ufowreck:alien_metal", "technic:hv_cable", "ufowreck:alien_metal"}
   }
