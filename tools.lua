@@ -153,7 +153,7 @@ minetest.register_tool("ufowreck:heater", {
 	local res = minetest.find_nodes_in_area(
 		{x = pos.x - r, y = pos.y - 1, z = pos.z - r},
 		{x = pos.x + r, y = pos.y + 2, z = pos.z + r},
-		{"default:ice", "default:snowblock"})
+		{"default:ice", "default:snowblock", "default:cave_ice"})
 	
 	for n = 1, #res do
 		minetest.swap_node(res[n], {name = "default:water_source"})
