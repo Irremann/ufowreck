@@ -1,6 +1,7 @@
 Ufo wreck mod by Irremann
 
 Based on "scifi_nodes" and "amcaw" mods. Warning: there may be conflicts, do not use them together.
+Teleport gun based on "point teleporter" mod by Wuzzy.
 
 This mod creates a fleet of 4-6 UFOs when generating a map. Although UFOs are damaged during landing, you can find alien artifacts and plants inside them. ( Our researchers are not sure about plants, perhaps they are animals).
 
