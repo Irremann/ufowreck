@@ -31,6 +31,10 @@ minetest.register_node("ufowreck:alien_antigrav_off", {
 			end
 		end
 	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Antigrav inactive (2000EU HV required)")
+	end,
 })
 
 minetest.register_node("ufowreck:alien_antigrav", {
@@ -88,6 +92,10 @@ minetest.register_node("ufowreck:alien_antigrav", {
 			end
 			pos.y = pos.y + 1
 		end
+	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Antigrav active - 2000EU HV")
 	end,
 })
 

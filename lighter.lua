@@ -9,7 +9,7 @@ minetest.register_node("ufowreck:alien_lighter", {
 		{name="alien_lighter.png", animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=2.00},}
 	},
 	light_source = 5,
-	groups = {cracky=2, technic_machine = 1, technic_hv = 1, technic_mv = 1},
+	groups = {cracky=2, technic_machine = 1, technic_hv = 1},
 	connect_sides = {"top", "bottom"},
 	sounds = default.node_sound_metal_defaults(),
 	drop = "ufowreck:alien_lighter",
@@ -49,6 +49,10 @@ minetest.register_node("ufowreck:alien_lighter", {
 			pos.x = pos.x + 2
 			pos.z = pos.z - 14
 		end	
+	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Lighter active (4500EU HV requared)")
 	end,
 })
 

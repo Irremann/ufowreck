@@ -19,6 +19,10 @@ minetest.register_node("ufowreck:alien_engine", {
 			meta:set_string("infotext", "Alien Engine")
 			meta:set_int("HV_EU_supply", 5000)
 	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Engine active (5000EU HV prodused)")
+	end,
 })
 
 technic.register_machine("HV", "ufowreck:alien_engine", technic.producer)
@@ -53,6 +57,10 @@ minetest.register_node("ufowreck:alien_health_charger0", {
 			local node = minetest.get_node(pos)
 			minetest.set_node(pos, {name = "ufowreck:alien_health_charger2", param2=node.param2,})
 		end
+	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Charger active (4500EU HV requared)")
 	end,
 })
 
@@ -99,6 +107,10 @@ minetest.register_node("ufowreck:alien_health_charger2", {
 			minetest.set_node(pos, {name = "ufowreck:alien_health_charger4", param2=node.param2,})
 		end
 	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Charger active (4500EU HV requared)")
+	end,
 })
 
 minetest.register_node("ufowreck:alien_health_charger4", {
@@ -143,6 +155,10 @@ minetest.register_node("ufowreck:alien_health_charger4", {
 			local node = minetest.get_node(pos)
 			minetest.set_node(pos, {name = "ufowreck:alien_health_charger6", param2=node.param2,})
 		end
+	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Charger active (4500EU HV requared)")
 	end,
 })
 
@@ -190,6 +206,10 @@ minetest.register_node("ufowreck:alien_health_charger6", {
 			minetest.set_node(pos, {name = "ufowreck:alien_health_charger8", param2=node.param2,})
 		end
 	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Charger active (4500EU HV requared)")
+	end,
 })
 
 minetest.register_node("ufowreck:alien_health_charger8", {
@@ -226,6 +246,10 @@ minetest.register_node("ufowreck:alien_health_charger8", {
 		local meta = player:get_meta()
 		if meta:get_int("snakepoison") > 0 then meta:set_int("snakepoison",0) end
 		water_life.change_hud(player,"poison",0)                                
+	end,
+	technic_run = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", "Alien Charger active (4500EU HV requared)")
 	end,
 })
 
