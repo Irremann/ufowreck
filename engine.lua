@@ -97,7 +97,9 @@ minetest.register_node("ufowreck:alien_health_charger2", {
 --poison from water life support
 		local meta = player:get_meta()
 		if meta:get_int("snakepoison") > 0 then meta:set_int("snakepoison",0) end
-		water_life.change_hud(player,"poison",0)                                
+		if minetest.get_modpath('water_life') ~= nil then
+			water_life.change_hud(player,"poison",0)
+		end
 	end,
 	on_timer = function(pos)
 		local meta = minetest.get_meta(pos)
@@ -146,7 +148,9 @@ minetest.register_node("ufowreck:alien_health_charger4", {
 --poison from water life support
 		local meta = player:get_meta()
 		if meta:get_int("snakepoison") > 0 then meta:set_int("snakepoison",0) end
-		water_life.change_hud(player,"poison",0)                                
+		if minetest.get_modpath('water_life') ~= nil then
+			water_life.change_hud(player,"poison",0)
+		end
 	end,
 	on_timer = function(pos)
 		local meta = minetest.get_meta(pos)
@@ -196,7 +200,9 @@ minetest.register_node("ufowreck:alien_health_charger6", {
 --poison from water life support
 		local meta = player:get_meta()
 		if meta:get_int("snakepoison") > 0 then meta:set_int("snakepoison",0) end
-		water_life.change_hud(player,"poison",0)                                
+		if minetest.get_modpath('water_life') ~= nil then
+			water_life.change_hud(player,"poison",0)
+		end
 	end,
 	on_timer = function(pos)
 		local meta = minetest.get_meta(pos)
@@ -245,7 +251,9 @@ minetest.register_node("ufowreck:alien_health_charger8", {
 --poison from water life support
 		local meta = player:get_meta()
 		if meta:get_int("snakepoison") > 0 then meta:set_int("snakepoison",0) end
-		water_life.change_hud(player,"poison",0)                                
+		if minetest.get_modpath('water_life') ~= nil then
+			water_life.change_hud(player,"poison",0)
+		end
 	end,
 	technic_run = function(pos)
 		local meta = minetest.get_meta(pos)
